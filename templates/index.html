@@ -1,0 +1,21 @@
+<div class = "login">
+    <h1>
+        Prediction of Flower Class 
+    </h1>
+    <h2>
+        Enter the following values to get the flower class
+    </h2>
+
+    <form action = "{{url_for('predict')}}" method = "post">
+        <input type = "text" name = "SepalLength" placeholder="Sepal Length" required="required" />
+        <input type = "text" name = "SepalWidth" placeholder="Sepal Width" required="required" />
+        <input type = "text" name = "PetalLength" placeholder="Petal Length" required="required" />
+        <input type = "text" name = "PetalWidth" placeholder="Petal Width" required="required" />
+
+        <button type = "submit" class="btn">Predict</button>
+    </form>
+
+    <br>
+    <br>
+    {{prediction_text}}
+</div>
